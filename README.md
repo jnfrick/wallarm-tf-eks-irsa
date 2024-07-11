@@ -24,6 +24,8 @@ Check to ensure Wallarm node registered to your tenant:
 Wallarm Console > Nodes
 
 Check detection:
-`curl https://<YOUR_SITE>/etc/passwd`
+```
+curl https://<YOUR_SITE>/etc/passwd
+```
 
 Review Wallarm console in Attacks section to ensure attack was detected and the source IP is correctly reported.
