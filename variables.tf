@@ -7,13 +7,13 @@ variable "region" {
 variable "eks_cluster_name" {
   description = "Cluster name prefix - random suffix will be created"
   type        = string
-  default     = "jfrick-eks"
+  default     = "my-eks-name"
 }
 
 variable "irsa_name" {
   description = "Name of the IRSA to be used for Wallarm serviceRole"
   type        = string
-  default     = "wallarm-irsa-test"
+  default     = "wallarm-irsa"
 }
 
 variable "wallarm_namespace" {
