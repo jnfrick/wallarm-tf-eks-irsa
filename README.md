@@ -9,7 +9,9 @@ kubectl annotate ingress <YOUR_INGRESS_NAME> -n <YOUR_INGRESS_NAMESPACE> nginx.i
 ```
 
 Now check funcionality of Wallarm pods:
-```kubectl get pods -n <WALLARM_NAMESPACE> -l app.kubernetes.io/name=wallarm-ingress```
+```
+kubectl get pods -n <WALLARM_NAMESPACE> -l app.kubernetes.io/name=wallarm-ingress
+```
 
 Ensure `STATUS: Running` and `READY: N/N`:
 ```
