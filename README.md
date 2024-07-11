@@ -23,6 +23,18 @@ ingress-controller-nginx-ingress-controller-wallarm-tarantxxxxx   4/4       Runn
 Check to ensure Wallarm node registered to your tenant:
 Wallarm Console > Nodes
 
+Find Load Balancer assigned to Wallarm in K8s:
+```
+kubectl get svc -n <WALLARM_NAMESPACE>
+```
+
+```
+NAMESPACE     NAME                                TYPE           CLUSTER-IP       EXTERNAL-IP                          PORT(S)                      AGE
+wallarm       wallarm-wallarm-ingress-controller  LoadBalancer   10.100.130.148   a2134-etc.region.elb.amazonaws.com   80:32196/TCP,443:32028/TCP   5m26s
+```
+
+Update your site's DNS to point to the Load Balancer associated with the Wallarm Ingress Controller K8s service under `EXTERNAL-IP`
+
 Check detection:
 ```
 curl https://<YOUR_SITE>/etc/passwd
